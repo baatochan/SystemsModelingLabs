@@ -1,0 +1,12 @@
+group pierwszy;
+
+int(i,j) ::= <<
+MOV A,#<i> ; po raz <j>
+
+>>
+
+dodaj(p1, p2) ::= "<p1> <p2>... i nie zawaham się go użyć..."
+
+dek(n) ::= <<
+DD <n>
+>>
