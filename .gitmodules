@@ -1,3 +1,6 @@
 [submodule "1-custom-programming-language/2-interpreter"]
 	path = 1-custom-programming-language/2-interpreter
 	url = https://baatochan@bitbucket.org/baatochan/antlr_swing.git
+[submodule "1-custom-programming-language/3-compiler"]
+	path = 1-custom-programming-language/3-compiler
+	url = https://baatochan@bitbucket.org/baatochan/antlr_swing.git
