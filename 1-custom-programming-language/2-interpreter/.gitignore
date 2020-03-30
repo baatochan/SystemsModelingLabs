@@ -1,9 +1,0 @@
-/src/tb/antlr/ExprLexer.java
-/src/tb/antlr/ExprParser.java
-/src/tb/antlr/interpreter/TExpr1.java
-/src/tb/antlr/kompilator/TExpr3.java
-
-*.class
-*.tokens
-
-/.metadata/
