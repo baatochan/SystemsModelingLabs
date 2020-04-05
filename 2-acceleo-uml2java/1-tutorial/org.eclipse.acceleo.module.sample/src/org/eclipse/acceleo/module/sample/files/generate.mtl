@@ -1,0 +1,57 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')/]
+
+[comment][import org::eclipse::acceleo::module::sample::services::uml2services /][/comment]
+
+[template public generateElement(aClass : Class)]
+[comment][if (aClass.hasStereotype('Bean'))][/comment]
+[file (aClass.classFileName(), false, 'UTF-8')]
+package [aClass.containingPackages().name->sep('.')/];
+
+// [protected ('imports')]
+// [/protected]
+
+	/**
+	* @generated
+	*/
+	public class [aClass.name.toUpperFirst()/] {
+	[for (p: Property | aClass.attribute) separator('\n')]
+		/**
+		* @generated
+		*/
+		private [p.type.name/] [p.name/];
+	[/for]
+	[for (p: Property | aClass.attribute) separator('\n')]
+		/**
+		* @generated
+		*/
+		public [p.type.name/] get(p.name.toUpperFirst()/]() {
+			return this.[p.name/];
+		}
+	[/for]
+	[for (o: Operation | aClass.ownedOperation) separator('\n')]
+		/**
+		* @not-generated
+		*/
+		public [o.type.name/] [o.name/]() {
+			// [protected (o.name)]
+			// TODO should be implemented
+			// [/protected]
+		}
+	[/for]
+	}
+[/file]
+[comment][/if][/comment]
+[/template]
+
+[query public classFileName (aClass : Class) : String =
+aClass.qualifiedName().replaceAll('\\.','/').concat('.java')
+/]
+
+[query public qualifiedName (aClass : Class) : String =
+aClass.containingPackages().name->sep('.')->including('.')->including(aClass.name)->toString()
+/]
+
+[query public containingPackages (aClass : Class) : Sequence(Package) =
+aClass.ancestors(Package)->reject(oclIsKindOf(Model))->reverse()
+/]
