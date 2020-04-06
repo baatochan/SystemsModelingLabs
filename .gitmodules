@@ -4,3 +4,6 @@
 [submodule "1-custom-programming-language/3-compiler"]
 	path = 1-custom-programming-language/3-compiler
 	url = https://baatochan@bitbucket.org/baatochan/antlr_swing.git
+[submodule "2-acceleo-uml2java/2-basic-uml2java-converter"]
+	path = 2-acceleo-uml2java/2-basic-uml2java-converter
+	url = https://baatochan@bitbucket.org/baatochan/testacceleo_2019.git
