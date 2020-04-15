@@ -12,7 +12,7 @@ Data | Tytuł zajęć | Uczestnicy
 Wykonaj formalny opis tej sieci Petriego.
 ```
 
-![Schemat sieci 1](net1.png =200x0)
+![Schemat sieci 1](net1.png)
 
 #### Formalny opis sieci Petriego:
 
@@ -25,15 +25,13 @@ SP = <P,T,F,H,W,C,M<sub>0</sub>>, gdzie:
 * C = {∞, ∞, ∞, ∞, ∞, ∞, ∞}
 * M<sub>0</sub> = {1, 0, 0, 0, 1, 1, 0}
 
-<div class="page-break"></div>
-
 ### Zadanie 2
 
 ```
 Wykonaj graf osiągalności dla sieci Petriego z pierwszego zadania.
 ```
 
-![Graf osiągalności](reachability-graph.png =400x0)
+![Graf osiągalności](reachability-graph.png)
 
 ### Zadanie 3
 
@@ -58,16 +56,14 @@ W sieci istnieją stany z dwoma i trzema znacznikami. Nie jest więc to sieć za
 #### Żywotność
 Patrząc na graf osiągalności widzimy, że znajduje się w nim każde przejście, oraz że sieć działa w pętli. Oznacza to więc, że w każdym stanie sieci można odpalić jedno przejście i każde przejście może być kiedyś odpalone, czyli sieć jest żywotna.
 
-<div class="page-break"></div>
-
 ### Zadanie 4
 
 ```
 Ogranicz liczbę znaczników w miejscu p2 do 1 w tej sieci Petriego, bez zmiany reszty zachowania sieci.
 ```
 
-![Schemat sieci 1](net2.png =200x0)
+![Schemat sieci 1](net2.png)
 
 Treść polecenia nie mówi nic o braku możliwości skorzystania z łuku hamującego. Moje rozwiązanie polega, więc na dodaniu łuku hamującego {p<sub>2</sub>, t<sub>2</sub>} o wadze 1.
 
-![Rozwiązanie zadania 4](net2-solved.png =300x0)
+![Rozwiązanie zadania 4](net2-solved.png)
