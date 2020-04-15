@@ -31,8 +31,8 @@
       <arcpath arcPointType="false" id="1" xCoord="308" yCoord="435"/>
     </arc>
     <arc id="T2 to P2" inscription="1" nameOffsetX="0.0" nameOffsetY="0.0" source="T2" target="P2" type="normal" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="315" yCoord="428"/>
-      <arcpath arcPointType="false" id="1" xCoord="387" yCoord="405"/>
+      <arcpath arcPointType="false" id="0" xCoord="318" yCoord="431"/>
+      <arcpath arcPointType="false" id="1" xCoord="387" yCoord="406"/>
     </arc>
     <arc id="P2 to T3" inscription="[0,inf)" nameOffsetX="0.0" nameOffsetY="0.0" source="P2" target="T3" type="timed" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="396" yCoord="415"/>
@@ -75,6 +75,10 @@
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="336"/>
       <arcpath arcPointType="false" id="1" xCoord="387" yCoord="297"/>
       <arcpath arcPointType="false" id="2" xCoord="266" yCoord="310"/>
+    </arc>
+    <arc id="P2 to T2" inscription="[0,inf)" nameOffsetX="0.0" nameOffsetY="0.0" source="P2" target="T2" type="tapnInhibitor" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="386" yCoord="404"/>
+      <arcpath arcPointType="false" id="1" xCoord="311" yCoord="424"/>
     </arc>
   </net>
   <k-bound bound="3"/>
