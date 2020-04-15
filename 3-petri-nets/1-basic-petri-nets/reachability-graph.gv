@@ -1,0 +1,13 @@
+digraph {
+	s0 [label=<s<sub>0</sub> {1, 0, 0, 0, 1, 1, 0}>];
+	s1 [label=<s<sub>1</sub> {0, 1, 0, 0, 0, 1, 0}>];
+	s2 [label=<s<sub>2</sub> {0, 0, 1, 0, 0, 1, 0}>];
+	s3 [label=<s<sub>3</sub> {1, 0, 0, 1, 0, 1, 0}>];
+	s4 [label=<s<sub>4</sub> {1, 0, 0, 0, 0, 0, 1}>];
+
+	s0 -> s1 [label=<t<sub>1</sub>>];
+	s1 -> s2 [label=<t<sub>2</sub>>];
+	s2 -> s3 [label=<t<sub>0</sub>>];
+	s3 -> s4 [label=<t<sub>3</sub>>];
+	s4 -> s0 [label=<t<sub>4</sub>>];
+}
