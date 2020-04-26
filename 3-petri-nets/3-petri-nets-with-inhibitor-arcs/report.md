@@ -22,7 +22,7 @@ Te trzy fragmenty sieci Petriego modelują sytuację na przejeździe kolejowym:
 	– p6 - semafor świeci się na czerwono (wjazd pociągu na przejazd nie jest możliwy).
 ```
 
-![Zadanie 1](net1.png =350x0)
+![Zadanie 1](net1.png)
 
 ```
 Rozbuduj tę sieć, tak aby wjazd pociągu na odcinek przed semaforem (p0) powodował opuszczenie szlabanu, a następnie zaświecenie semaforu na zielono. Analogicznie, aby wyjazd pociągu z przejazdu (p2) powodował zaświecenie semaforu na czerwono, a następnie podniesienie szlabanu, o ile nie ma więcej pociągów za semaforem (p1) lub na przejeździe (p2). Przed przejazdem (p1) może przebywać jednocześnie najwyżej 3 pociągi, a na przejeździe (p2) najwyżej jeden pociąg.
