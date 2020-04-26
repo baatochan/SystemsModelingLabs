@@ -12,7 +12,7 @@ Data | Tytuł zajęć | Uczestnicy
 Ta sieć Petriego modeluje pory roku. Łuki wchodzące do przejść są czasowe i definiują czas trwania pór roku. Położenie znaczniku oznacza trwającą porę: p0 - lato, p1 - jesień, p2 - zimę i p3 - wiosnę.
 ```
 
-![Zadanie 1](net1.png =250x0)
+![Zadanie 1](net1.png)
 
 ```
 Rozbuduj tą sieć, tak aby zima trwała jeden dzień dłużej raz na cztery lata (tzw. rok przestępny). Użyj łuki hamujące i różne wagi łuków.
@@ -20,7 +20,7 @@ Rozbuduj tą sieć, tak aby zima trwała jeden dzień dłużej raz na cztery lat
 
 Rozwiązaniem tego zadania jest dodanie pola, które "zlicza" ilość lat pomiędzy latami przestępnymi i gdy miną 4 dezaktywuje zwykłe przejście aktywując przejście przestępne (różnica w wartości czasowej). Sieć nie uwzględnia braku występowania roku przestępnego w pełnych stuleciach nie podzielnych przez 400 (jak lata 1900, czy 2100), jednak nie było o tym w treści zadania.
 
-![Rozwiązanie zadania 1](net1-task1.png =300x0)
+![Rozwiązanie zadania 1](net1-task1.png)
 
 <div class="page-break"></div>
 
@@ -35,7 +35,7 @@ Ta sieć Petriego modeluje sygnalizację świetlną na przejściu dla pieszych: 
 – p6 - sygnalizator dla pieszych świeci się na zielono.
 ```
 
-![Zadanie 2](net2.png =250x0)
+![Zadanie 2](net2.png)
 
 ```
 Przebuduj tą sieć, tak aby:
@@ -47,7 +47,7 @@ Przebuduj tą sieć, tak aby:
 
 Sieć z zadania posiada kolejność świateł dla samochodów (lewa strona) następującą: czerwony, żółty, zielony, czerwony, itd. Z uwagi na zmianę kolejności na odpowiadającą rzeczywistej konieczne jest skomplikowanie przejść po lewej stronie. Dodatkowo trzeba w nich uwzględnić odpowiednie wartości wartkości czasowych.
 
-![Rozwiązanie zadania 2](net2-task2.png =320x0)
+![Rozwiązanie zadania 2](net2-task2.png)
 
 ### Zadanie 3
 
