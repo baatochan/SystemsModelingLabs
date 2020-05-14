@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tpn-editor>
+  <tpn-entities>
+    <joint uuid="05b88505-2170-45cf-b756-f4bdad60e429" x="310" y="104">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="05ce8b13-88ff-42fa-82c1-05a234fc6546" x="1043" y="768">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="3413c2ba-e608-4cf0-9b31-fa3a2a8fdb9a" x="1043" y="460">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="345a3785-1caf-44f7-9b50-ba9f7cbcfe0f" x="358" y="562">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="3ddb1e42-37a0-4530-8ba2-cb0bede6f9d1" x="205" y="74">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="814ed9bd-b331-45dd-8862-ffd2023ed194" x="358" y="269">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="819cc6cd-7cda-42fa-9313-f03d35cab68f" x="702" y="428">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="854fcd94-b014-4d64-b516-97c5c8600ece" x="795" y="74">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="8f159d17-5abc-46be-a7ee-7841c791815f" x="480" y="293">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="abff3f18-2328-40d2-8355-62b17be47ab3" x="882" y="313">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="bad2dce2-7bed-4185-931f-461324f71411" x="205" y="638">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="c27a0edc-38a1-4ea6-87aa-6c6746b9cb45" x="292" y="512">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="d24c90da-e264-461e-9e54-f4905f9000d7" x="404" y="153">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="d74691e6-d634-4b3e-97ef-ff67e8449f1f" x="891" y="434">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="df2a5b19-0424-47e9-94f9-a08b4283a0f0" x="325" y="733">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="ef8945f6-23e3-42ec-9d6b-1ceaa85f75f5" x="310" y="371">
+      <features/>
+      <properties/>
+    </joint>
+    <place uuid="04e0fc82-39a5-4d01-a758-0f9fee67151e" x="701" y="569">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p4" satellite-x="679" satellite-y="591"/>
+        <property id="default.marking" marking="1"/>
+      </properties>
+    </place>
+    <place uuid="1cb313f4-f08b-4a1e-878c-3c52d8381450" x="850" y="216">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p7" satellite-x="828" satellite-y="238"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="4a9e36eb-6d65-40b0-a23c-1e042ee59ef7" x="436" y="674">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p2" satellite-x="414" satellite-y="696"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="4afd51e0-c894-4e96-b602-70953c37b5e2" x="969" y="463">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p5" satellite-x="947" satellite-y="485"/>
+        <property id="default.marking" marking="1"/>
+      </properties>
+    </place>
+    <place uuid="5b52b46e-5162-452b-9117-f6f90634f105" x="971" y="674">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p6" satellite-x="949" satellite-y="696"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="6468facb-b4a0-4e92-989f-6447935681f4" x="436" y="459">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p1" satellite-x="414" satellite-y="481"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" x="436" y="238">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p0" satellite-x="414" satellite-y="260"/>
+        <property id="default.marking" marking="1"/>
+      </properties>
+    </place>
+    <place uuid="f687e182-2647-4df8-9592-6515ab63a366" x="701" y="350">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p3" satellite-x="679" satellite-y="372"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <transition rotation-angle="0.0" uuid="5b3e4745-af8e-4de0-b756-7f242515bffe" x="850" y="325">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t6" satellite-x="868" satellite-y="337"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" lambda="1/300" property-data-type="3.type.exponential" satellite-x="850" satellite-y="355"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="6c8cede5-e6c4-46e9-84ee-3d05ea2dd1f7" x="971" y="768">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t4" satellite-x="989" satellite-y="780"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" lambda="1/30" property-data-type="3.type.exponential" satellite-x="971" satellite-y="798"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="7c04301b-673e-44f5-8f41-fefef3790524" x="260" y="638">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t5" satellite-x="278" satellite-y="650"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" lambda="1/45" property-data-type="3.type.exponential" satellite-x="260" satellite-y="668"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="9e170ce0-fd09-451c-81eb-06a84f43105f" x="969" y="568">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t3" satellite-x="987" satellite-y="580"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" priority="0" property-data-type="0.type.immediate" satellite-x="969" satellite-y="598" weight="1"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="cce62080-5d97-4aeb-823d-0c78c05dc113" x="436" y="104">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t0" satellite-x="454" satellite-y="116"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" lambda="1/3" property-data-type="3.type.exponential" satellite-x="436" satellite-y="134"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="eb3b406a-44b0-4270-a9d2-6587f97c67f8" x="436" y="583">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t2" satellite-x="454" satellite-y="595"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" lambda="1/3" property-data-type="3.type.exponential" satellite-x="436" satellite-y="613"/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="fe44f29f-5593-42f7-9a47-653353e7e85d" x="436" y="357">
+      <features>
+        <feature id="transition.stochastic"/>
+      </features>
+      <properties>
+        <property id="0.default.name" name="t1" satellite-x="454" satellite-y="369"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+        <property id="transition.stochastic" priority="0" property-data-type="0.type.immediate" satellite-x="436" satellite-y="387" weight="1"/>
+      </properties>
+    </transition>
+    <inhibitor-arc from="6468facb-b4a0-4e92-989f-6447935681f4" to="819cc6cd-7cda-42fa-9313-f03d35cab68f" uuid="122950ad-6fde-49ed-b57f-2e9b4d1041a8">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" to="d24c90da-e264-461e-9e54-f4905f9000d7" uuid="1ccf1ee7-13f6-46f4-8015-68b38bc35e3f">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="1cb313f4-f08b-4a1e-878c-3c52d8381450" to="abff3f18-2328-40d2-8355-62b17be47ab3" uuid="6bee8fb5-31fb-444c-9c99-63b5d3dd91dd">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="d24c90da-e264-461e-9e54-f4905f9000d7" to="cce62080-5d97-4aeb-823d-0c78c05dc113" uuid="e4574c1e-1f92-4529-80db-13e3bc69046f">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="819cc6cd-7cda-42fa-9313-f03d35cab68f" to="5b3e4745-af8e-4de0-b756-7f242515bffe" uuid="ed6a2355-a78c-42c9-90f5-505d83e4c5ea">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="abff3f18-2328-40d2-8355-62b17be47ab3" to="5b3e4745-af8e-4de0-b756-7f242515bffe" uuid="f482ea88-4b5c-4164-9e71-d85a8f2117da">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <inhibitor-arc from="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" to="5b3e4745-af8e-4de0-b756-7f242515bffe" uuid="f8069b98-94cb-48bd-97bd-95c0d479a6fa">
+      <features/>
+      <properties/>
+    </inhibitor-arc>
+    <arc from="bad2dce2-7bed-4185-931f-461324f71411" to="7c04301b-673e-44f5-8f41-fefef3790524" uuid="0b6d5bfb-1b16-4bab-b637-8c62cf21fb53">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="05ce8b13-88ff-42fa-82c1-05a234fc6546" to="3413c2ba-e608-4cf0-9b31-fa3a2a8fdb9a" uuid="0d0d2e09-4774-445c-b706-06ab0e7b1adf">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="814ed9bd-b331-45dd-8862-ffd2023ed194" to="345a3785-1caf-44f7-9b50-ba9f7cbcfe0f" uuid="13d843a2-942e-4cc2-9ae4-84930d3259ed">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="1cb313f4-f08b-4a1e-878c-3c52d8381450" to="854fcd94-b014-4d64-b516-97c5c8600ece" uuid="167d0d3c-658d-4466-9e7a-74aa9370b565">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="5b3e4745-af8e-4de0-b756-7f242515bffe" to="d74691e6-d634-4b3e-97ef-ff67e8449f1f" uuid="24c25984-0d1c-4bbc-8727-c25f8b9e2ea9">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="6c8cede5-e6c4-46e9-84ee-3d05ea2dd1f7" to="04e0fc82-39a5-4d01-a758-0f9fee67151e" uuid="2b83cd2e-fb9c-402d-b670-37cb4ac2a8f1">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" to="fe44f29f-5593-42f7-9a47-653353e7e85d" uuid="32e17d9b-e855-4a42-a91d-e2570e62e38a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="c27a0edc-38a1-4ea6-87aa-6c6746b9cb45" to="6468facb-b4a0-4e92-989f-6447935681f4" uuid="3c9f2e04-1b88-4408-bcbb-422f1efc477a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="fe44f29f-5593-42f7-9a47-653353e7e85d" to="8f159d17-5abc-46be-a7ee-7841c791815f" uuid="3e12860b-9774-4a0d-b7ab-982b48238690">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="f687e182-2647-4df8-9592-6515ab63a366" to="9e170ce0-fd09-451c-81eb-06a84f43105f" uuid="3e278195-e00c-4bef-ab2e-9fa57a42016e">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="5b52b46e-5162-452b-9117-f6f90634f105" to="6c8cede5-e6c4-46e9-84ee-3d05ea2dd1f7" uuid="4598e204-9675-4986-a058-d2cd3e48cd17">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="4a9e36eb-6d65-40b0-a23c-1e042ee59ef7" to="df2a5b19-0424-47e9-94f9-a08b4283a0f0" uuid="466c4a14-9556-4a29-be9a-3e42e8126a05">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="cce62080-5d97-4aeb-823d-0c78c05dc113" to="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" uuid="4be22105-b1ce-4979-a28f-801ccb2f2d2a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="04e0fc82-39a5-4d01-a758-0f9fee67151e" to="fe44f29f-5593-42f7-9a47-653353e7e85d" uuid="4cce0389-4187-4ebc-8494-b8fdebacf825">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="4afd51e0-c894-4e96-b602-70953c37b5e2" to="5b3e4745-af8e-4de0-b756-7f242515bffe" uuid="5cfa236d-3f08-4570-bc93-4abf6844322a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="3413c2ba-e608-4cf0-9b31-fa3a2a8fdb9a" to="4afd51e0-c894-4e96-b602-70953c37b5e2" uuid="725f3725-4cdc-4233-8b47-644f2223d6e4">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="345a3785-1caf-44f7-9b50-ba9f7cbcfe0f" to="eb3b406a-44b0-4270-a9d2-6587f97c67f8" uuid="730d3214-5fad-4b86-9f43-f0b6ff1d6070">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="7c04301b-673e-44f5-8f41-fefef3790524" to="c27a0edc-38a1-4ea6-87aa-6c6746b9cb45" uuid="79c030f0-184e-43bd-9e85-f0135173876c">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" to="814ed9bd-b331-45dd-8862-ffd2023ed194" uuid="7d9645d2-c709-4835-9877-e9b4655884f7">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="05b88505-2170-45cf-b756-f4bdad60e429" to="cce62080-5d97-4aeb-823d-0c78c05dc113" uuid="941fa164-552e-4238-83a2-332b8229f5a5">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="6468facb-b4a0-4e92-989f-6447935681f4" to="ef8945f6-23e3-42ec-9d6b-1ceaa85f75f5" uuid="969d784b-b667-4f21-8e71-82cb3cbdd0c3">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="ef8945f6-23e3-42ec-9d6b-1ceaa85f75f5" to="05b88505-2170-45cf-b756-f4bdad60e429" uuid="9891b448-9f42-44f4-aed1-a5a704f46a3f">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="fe44f29f-5593-42f7-9a47-653353e7e85d" to="6468facb-b4a0-4e92-989f-6447935681f4" uuid="9fe4a9f9-4b05-48b3-8014-dd33f9fd5d46">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="eb3b406a-44b0-4270-a9d2-6587f97c67f8" to="4a9e36eb-6d65-40b0-a23c-1e042ee59ef7" uuid="a10f63d8-15be-4fbe-99c3-a3530cb61772">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="8f159d17-5abc-46be-a7ee-7841c791815f" to="71ceeb00-6fdd-4e8b-b1c7-793fefe083cf" uuid="a90b8417-f8b0-4ab2-a34c-1f5b7b6736e9">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="9e170ce0-fd09-451c-81eb-06a84f43105f" to="5b52b46e-5162-452b-9117-f6f90634f105" uuid="a93dd0fb-2fbd-465c-8aad-555d8be2daee">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="4afd51e0-c894-4e96-b602-70953c37b5e2" to="9e170ce0-fd09-451c-81eb-06a84f43105f" uuid="b92ea9b9-ba60-40df-8ef3-a1a84cdbdc65">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="cce62080-5d97-4aeb-823d-0c78c05dc113" to="f687e182-2647-4df8-9592-6515ab63a366" uuid="bcf2d298-d183-4656-9b08-b7984ef3a8fa">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="6468facb-b4a0-4e92-989f-6447935681f4" to="eb3b406a-44b0-4270-a9d2-6587f97c67f8" uuid="c0559664-8857-437d-93a9-316f6d62e99a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="6c8cede5-e6c4-46e9-84ee-3d05ea2dd1f7" to="05ce8b13-88ff-42fa-82c1-05a234fc6546" uuid="c7477157-26be-47cb-8a4f-7a53ea2eed01">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="df2a5b19-0424-47e9-94f9-a08b4283a0f0" to="7c04301b-673e-44f5-8f41-fefef3790524" uuid="cdcc237c-de4b-4670-9148-2e209e92eecd">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="d74691e6-d634-4b3e-97ef-ff67e8449f1f" to="4afd51e0-c894-4e96-b602-70953c37b5e2" uuid="dad9dead-5873-4bfd-a383-688ab8cb721a">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="5b3e4745-af8e-4de0-b756-7f242515bffe" to="1cb313f4-f08b-4a1e-878c-3c52d8381450" uuid="f954e8b1-9a8f-47fa-a2b6-7262ca6c7c3c">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="3ddb1e42-37a0-4530-8ba2-cb0bede6f9d1" to="bad2dce2-7bed-4185-931f-461324f71411" uuid="f9b1f769-902f-4554-abc5-f4b095e68d79">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="854fcd94-b014-4d64-b516-97c5c8600ece" to="3ddb1e42-37a0-4530-8ba2-cb0bede6f9d1" uuid="faa32c42-b465-4a59-99ac-69e3041b5613">
+      <features/>
+      <properties/>
+    </arc>
+  </tpn-entities>
+</tpn-editor>
