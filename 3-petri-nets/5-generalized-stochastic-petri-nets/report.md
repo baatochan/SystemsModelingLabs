@@ -17,7 +17,7 @@ Wydaje mi się, że jako, że ta sieć moduluje pewien rzeczywisty proces, to mo
 
 Zgubienie wiadomości, jak i samo pobudzenie sieci poprzez wysłanie wiadomości uznałem, że są stosunkowo rzadkimi zjawiskami dlatego przejścia t0 oraz t6 mają λ=1. Procesy lokalne, takie jak szyfrowanie, deszyfrowanie, czy zapis wiadomości do pamięci są bardzo szybkie dlatego przejścia t1, t4 i t5 mają λ=100. Transmisja pomiędzy urządzeniami jest wolniejsza dlatego t3 ma λ=20. Przejścia t2 i t7 są przejściami natychmiastowymi, ponieważ samo rozpoczęcie transmisji praktycznie nie zajmuje czasu.
 
-![Rozwiązanie zadania 1](net1-task1.png =500x0)
+![Rozwiązanie zadania 1](net1-task1.png)
 
 <div class="page-break"></div>
 
