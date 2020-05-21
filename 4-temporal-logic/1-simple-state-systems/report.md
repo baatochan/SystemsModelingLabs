@@ -19,7 +19,7 @@ Zadanie zostało wykonane podążając zgodnie z tutorialem.
 Name: `mutex`  
 Parameters: `const int[1,2] me, int[0,1] &req_self, int[0,1] &req_other`
 
-![Rozwiązanie zadania 1](task1.png =300x0)
+![Rozwiązanie zadania 1](task1.png)
 
 #### Global declarations
 ```
@@ -35,8 +35,6 @@ P2 = mutex(2, req2, req1);
 
 system P1, P2;
 ```
-
-<div class="page-break"></div>
 
 ### Zadanie 2
 
@@ -62,8 +60,6 @@ int [0,2] correctDigits = 0;
 system Locker;
 ```
 
-<div class="page-break"></div>
-
 ### Zadanie 3
 
 ```
@@ -74,7 +70,7 @@ Rozwiązaniem zadania jest schemat widoczny poniżej. Zmienna `digit` w deklarac
 
 #### Template Generator
 
-![Rozwiązanie zadania 3](task3.png =300x0)
+![Rozwiązanie zadania 3](task3.png)
 
 #### Global declarations
 ```
@@ -86,8 +82,6 @@ int [0,9] digit = 0;
 ```
 system Generator;
 ```
-
-<div class="page-break"></div>
 
 ### Zadanie 4
 
@@ -99,7 +93,7 @@ Tak jak powyżej, tylko 10 przejść jest zamienionych na jedno, wykonujące ope
 
 #### Template Generator
 
-![Rozwiązanie zadania 4](task4.png =300x0)
+![Rozwiązanie zadania 4](task4.png)
 
 #### Global declarations
 ```
@@ -112,8 +106,6 @@ int [0,9] digit = 0;
 system Generator;
 ```
 
-<div class="page-break"></div>
-
 ### Zadanie 5
 
 ```
@@ -124,9 +116,7 @@ Generator użyty w tym zadaniu to ten, który stworzyłem w zad. 4, dodając do 
 
 #### Template Generator
 
-![Rozwiązanie zadania 5 - generator](task5-1.png =300x0)
-
-<div class="page-break"></div>
+![Rozwiązanie zadania 5 - generator](task5-1.png)
 
 #### Template Locker
 
