@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+int [0,9] digit = 0;</declaration><template><name x="5" y="5">Generator</name><declaration>// Place local declarations here.
+</declaration><location id="id0" x="16" y="-40"><name x="6" y="-70">s0</name></location><init ref="id0"/><transition><source ref="id0"/><target ref="id0"/><label kind="select" x="-24" y="-144">i : int[0,9]</label><label kind="assignment" x="-16" y="-120">digit := i</label><nail x="56" y="-120"/><nail x="-32" y="-120"/></transition></template><system>// Place template instantiations here.
+
+// List one or more processes to be composed into a system.
+system Generator;</system></nta>
