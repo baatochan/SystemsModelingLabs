@@ -28,7 +28,7 @@ Zadanie zostało wykonane zgodnie z poleceniem. Zamieniłem jednak wszystkie pol
 
 #### Template Month
 
-![Schemat automatu miesięcy](task1-month.png)
+![Schemat automatu miesięcy](task1-month.png =500x0)
 
 #### Local Month declarations
 ```
@@ -64,6 +64,8 @@ urgent chan yearIsLeap;
 ```
 system Month, Year;
 ```
+
+<div class="page-break"></div>
 
 ### Zadanie 2
 
