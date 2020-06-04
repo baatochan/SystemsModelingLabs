@@ -35,7 +35,7 @@ Automat sesji jest bardzo prosty - dwustanowy. Domyślnie sesja nie jest zestawi
 
 #### Template Server
 
-![Schemat automatu serwera](task1-server.png =270x0)
+![Schemat automatu serwera](task1-server.png)
 
 #### Local Server declarations
 ```
@@ -61,8 +61,6 @@ int t1;
 #### Template Session
 
 ![Schemat automatu sesji](task1-session.png)
-
-<div class="page-break"></div>
 
 #### Session parameters
 ```
