@@ -1,0 +1,59 @@
+MODULE main
+VAR	month : Month(year.yearType);
+	year : Year(month.isTheLastDayOfTheYear);
+
+MODULE Year(isTheLastDayOfTheYear)
+VAR	year : 1900..2020;
+	yearType : { regular, leap, none};
+
+DEFINE	isYearALeapYear := (year mod 100 != 0 & year mod 4 = 0) | (year mod 400 = 0);
+
+ASSIGN
+	init(year) := 1900;
+	next(year) := case
+		isTheLastDayOfTheYear & year < 2020 : year + 1;
+		TRUE : year;
+	esac;
+
+	init(yearType) := regular;
+	next(yearType) := case
+		yearType = none : none;
+		isTheLastDayOfTheYear & year = 2020 : none;
+		next(isYearALeapYear) : leap;
+		TRUE : regular;
+	esac;
+
+
+MODULE Month(yearType)
+VAR	month : { jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
+	day : 1..31;
+
+DEFINE	isTheLastDayOfTheYear := month = dec & day = 31;
+
+
+ASSIGN
+	init(month) := jan;
+	next(month) := case
+		next(yearType) = none : month;
+		month = jan & day = 31 : feb;
+		month = feb & yearType = regular & day = 28 : mar;
+		month = feb & yearType = leap & day = 29 : mar;
+		month = mar & day = 31 : apr;
+		month = apr & day = 30 : may;
+		month = may & day = 31 : jun;
+		month = jun & day = 30 : jul;
+		month = jul & day = 31 : aug;
+		month = aug & day = 31 : sep;
+		month = sep & day = 30 : oct;
+		month = oct & day = 31 : nov;
+		month = nov & day = 30 : dec;
+		isTheLastDayOfTheYear : jan;
+		TRUE : month;
+	esac;
+
+	init(day) := 1;
+	next(day) := case
+		next(yearType) = none : day;
+		month = next(month) & day < 31 : day + 1;
+		TRUE : 1;
+	esac;

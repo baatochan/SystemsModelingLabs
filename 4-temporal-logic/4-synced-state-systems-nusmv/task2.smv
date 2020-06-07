@@ -1,0 +1,51 @@
+MODULE main
+VAR	digit : 0..9;
+VAR	correctDigits : 0..3;
+
+INIT	correctDigits in case
+		digit = 1 : 1;
+		TRUE : 0;
+	esac;
+
+TRANS	next(digit) in case
+		correctDigits = 3 : digit;
+		TRUE : 0..9;
+	esac;
+
+TRANS	next(correctDigits) in case
+		correctDigits = 3 : correctDigits;
+		next(digit) = 1 : 1;
+		next(digit) = 5 & correctDigits = 1 : 2;
+		next(digit) = 9 & correctDigits = 2 : 3;
+		TRUE : 0;
+	esac;
+
+-- ile ruchów potrzeba minimalnie, aby otworzyć zamek
+COMPUTE	MIN[correctDigits=0, correctDigits=3] -- 3
+
+-- po ilu ruchach zamek zostanie na pewno otwarty
+COMPUTE	MAX[correctDigits=0, correctDigits=3] -- inf
+
+-- czy istnieje taka ścieżka, że zamek zostanie otwarty
+CTLSPEC EF(correctDigits=3) -- true
+
+-- czy z każdego miejsca automatu, zawsze istnieje taka ścieżka, że zamek zostanie otwarty
+CTLSPEC AG(EF(correctDigits=3)) -- true
+
+-- czy zawsze wprowadzona czyfra jest w przedziale [0, 9]
+CTLSPEC AG(digit >= 0 & digit <= 9) -- true
+
+-- czy dla każdej ścieżki zawsze, jeśli ilość wprowadzonych dobrze cyfr wynosi 1, to cyfra to 1
+CTLSPEC AG(correctDigits = 1 -> digit = 1) -- true
+
+-- czy dla każdej ścieżki zawsze, jeśli ilość wprowadzonych dobrze cyfr wynosi 2, to cyfra to 5
+CTLSPEC AG(correctDigits = 2 -> digit = 5) -- true
+
+-- czy dla każdej ścieżki zawsze, jeśli ilość wprowadzonych dobrze cyfr wynosi 3, to cyfra to 9
+CTLSPEC AG(correctDigits = 3 -> digit = 9) -- true
+
+-- czy dla każdej ścieżki zawsze, jeśli liczba poprawnie wprowadzonych cyfr wynosi 3, to już dla każdej ścieżki w następnym kroku, dla każdej ścieżki zawsze będzie prawdziwe, że wprowadzona cyfra to 9 i ilość poprawnie wprowadzonych cyfr to 3 (czyli, że automat się zablokuje)
+CTLSPEC AG(correctDigits = 3 -> AX(AG(digit = 9 & correctDigits = 3))) -- true
+
+-- czy nie prawdą jest, że dla każdej ścieżki, zawsze, gdy ilość poprawnie wprowadzonych liczb jest równa 3 to istnieje taka ścieżka, że od następnego kroku istnieje taka ścieżka, że kiedyś ilość wprowadzonych liczb ulegnie zmianie
+CTLSPEC !AG(correctDigits = 3 -> EX(EF(correctDigits != 3))) -- true
