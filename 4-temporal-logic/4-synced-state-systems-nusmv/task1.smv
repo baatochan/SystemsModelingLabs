@@ -1,13 +1,19 @@
-MODULE main 
-VAR x : 0..30;
-VAR y : boolean;
-INIT	x = 30 &
+MODULE main
+VAR
+	x : 0..30;
+	y : boolean;
+
+INIT
+	x = 30 &
 	y = TRUE;
-TRANS	next(x) in case
-		y : x mod 2; 
+
+TRANS
+	next(x) in case
+		y : x mod 2;
 		TRUE : x / 2;
 	esac;
-TRANS	next(y) = y;
-LTLSPEC y -> X(F(x=0)) 
-INVARSPEC y
+TRANS
+	next(y) = y;
 
+LTLSPEC y -> X(F(x=0))
+INVARSPEC y
