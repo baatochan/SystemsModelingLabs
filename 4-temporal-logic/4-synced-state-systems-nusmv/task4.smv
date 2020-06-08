@@ -57,3 +57,27 @@ ASSIGN
 		month = next(month) & day < 31 : day + 1;
 		TRUE : 1;
 	esac;
+
+LTLSPEC !F(month.day < 1)
+LTLSPEC !F(year.yearType = regular & month.month = feb & month.day > 28)
+LTLSPEC G(year.yearType = regular & month.month = feb -> month.day <= 28)
+LTLSPEC !F(year.yearType = leap & month.month = feb & month.day > 29)
+LTLSPEC G(year.yearType = leap & month.month = feb -> month.day <= 29)
+LTLSPEC G(month.month in { jan, mar, may, jul, aug, oct, dec } -> month.day <= 31)
+LTLSPEC G(month.month in { apr, jun, sep, nov } -> month.day <= 30)
+LTLSPEC G(year.year in { 1904, 1908, 1996, 2000, 2008 } -> year.yearType = leap)
+LTLSPEC G(year.year in { 1900, 1902, 1999, 2001, 2019 } -> year.yearType = regular)
+LTLSPEC G(year.year = 2020 -> year.yearType = leap | year.yearType = none)
+
+COMPUTE MAX[year.year = 2020 & year.yearType = leap & month.month = jan & month.day = 1, year.year = 2020 & year.yearType = leap & month.month = dec & month.day = 31]
+COMPUTE MAX[year.year = 1900 & month.month = jan & month.day = 1, year.year = 1900 & month.month = dec & month.day = 31]
+
+LTLSPEC G(year.year = 2020 & year.yearType = leap & month.month = dec & month.day = 31 -> X(G(year.yearType = none)))
+LTLSPEC G(year.year >= 1900 & year.year <= 2020)
+LTLSPEC G(year.yearType = regular -> X(F(year.yearType = leap)))
+LTLSPEC !G(year.yearType = regular)
+LTLSPEC G(F(year.year = 2020))
+LTLSPEC G(year.year = 2020 -> X(G(year.year = 2020)))
+LTLSPEC G(month.month = jan -> X(F(month.month = dec)))
+LTLSPEC G(year.yearType = leap -> year.isLeapYear)
+LTLSPEC G(year.isLeapYear -> year.yearType = leap | year.yearType = none)
