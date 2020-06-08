@@ -1,0 +1,37 @@
+MODULE main
+VAR
+	digit : 0..9;
+	correctDigits : 0..3;
+
+INIT
+	correctDigits in case
+		digit = 1 : 1;
+		TRUE : 0;
+	esac;
+
+TRANS
+	next(digit) in case
+		correctDigits = 3 : digit;
+		TRUE : 0..9;
+	esac;
+
+TRANS
+	next(correctDigits) in case
+		correctDigits = 3 : correctDigits;
+		next(digit) = 1 : 1;
+		next(digit) = 5 & correctDigits = 1 : 2;
+		next(digit) = 9 & correctDigits = 2 : 3;
+		TRUE : 0;
+	esac;
+
+COMPUTE MIN[correctDigits=0, correctDigits=3]
+COMPUTE MAX[correctDigits=0, correctDigits=3]
+
+CTLSPEC EF(correctDigits=3)
+CTLSPEC AG(EF(correctDigits=3))
+CTLSPEC AG(digit >= 0 & digit <= 9)
+CTLSPEC AG(correctDigits = 1 -> digit = 1)
+CTLSPEC AG(correctDigits = 2 -> digit = 5)
+CTLSPEC AG(correctDigits = 3 -> digit = 9)
+CTLSPEC AG(correctDigits = 3 -> AX(AG(digit = 9 & correctDigits = 3)))
+CTLSPEC !AG(correctDigits = 3 -> EX(EF(correctDigits != 3)))

@@ -1,0 +1,88 @@
+MODULE Year(isLastDay)
+VAR
+	year : 1900..2020;
+	yearType : { regular, leap, none};
+
+DEFINE
+	isLeapYear := (year mod 100 != 0 & year mod 4 = 0) | (year mod 400 = 0);
+
+ASSIGN
+	init(year) := 1900;
+	next(year) := case
+		isLastDay & year < 2020 : year + 1;
+		TRUE : year;
+	esac;
+
+	init(yearType) := regular;
+	next(yearType) := case
+		yearType = none : none;
+		isLastDay & year = 2020 : none;
+		next(isLeapYear) : leap;
+		TRUE : regular;
+	esac;
+
+
+MODULE Month(yearType)
+VAR
+	month : { jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
+	day : 1..31;
+
+DEFINE
+	isLastDay := month = dec & day = 31;
+
+
+ASSIGN
+	init(month) := jan;
+	next(month) := case
+		next(yearType) = none : month;
+		month = jan & day = 31 : feb;
+		month = feb & yearType = regular & day = 28 : mar;
+		month = feb & yearType = leap & day = 29 : mar;
+		month = mar & day = 31 : apr;
+		month = apr & day = 30 : may;
+		month = may & day = 31 : jun;
+		month = jun & day = 30 : jul;
+		month = jul & day = 31 : aug;
+		month = aug & day = 31 : sep;
+		month = sep & day = 30 : oct;
+		month = oct & day = 31 : nov;
+		month = nov & day = 30 : dec;
+		isLastDay : jan;
+		TRUE : month;
+	esac;
+
+	init(day) := 1;
+	next(day) := case
+		next(yearType) = none : day;
+		month = next(month) & day < 31 : day + 1;
+		TRUE : 1;
+	esac;
+
+MODULE main
+VAR
+	month : Month(year.yearType);
+	year : Year(month.isLastDay);
+
+LTLSPEC !F(month.day < 1)
+LTLSPEC !F(year.yearType = regular & month.month = feb & month.day > 28)
+LTLSPEC G(year.yearType = regular & month.month = feb -> month.day <= 28)
+LTLSPEC !F(year.yearType = leap & month.month = feb & month.day > 29)
+LTLSPEC G(year.yearType = leap & month.month = feb -> month.day <= 29)
+LTLSPEC G(month.month in { jan, mar, may, jul, aug, oct, dec } -> month.day <= 31)
+LTLSPEC G(month.month in { apr, jun, sep, nov } -> month.day <= 30)
+LTLSPEC G(year.year in { 1904, 1908, 1996, 2000, 2008 } -> year.yearType = leap)
+LTLSPEC G(year.year in { 1900, 1902, 1999, 2001, 2019 } -> year.yearType = regular)
+LTLSPEC G(year.year = 2020 -> year.yearType = leap | year.yearType = none)
+
+COMPUTE MAX[year.year = 2020 & year.yearType = leap & month.month = jan & month.day = 1, year.year = 2020 & year.yearType = leap & month.month = dec & month.day = 31]
+COMPUTE MAX[year.year = 1900 & month.month = jan & month.day = 1, year.year = 1900 & month.month = dec & month.day = 31]
+
+LTLSPEC G(year.year = 2020 & year.yearType = leap & month.month = dec & month.day = 31 -> X(G(year.yearType = none)))
+LTLSPEC G(year.year >= 1900 & year.year <= 2020)
+LTLSPEC G(year.yearType = regular -> X(F(year.yearType = leap)))
+LTLSPEC !G(year.yearType = regular)
+LTLSPEC G(F(year.year = 2020))
+LTLSPEC G(year.year = 2020 -> X(G(year.year = 2020)))
+LTLSPEC G(month.month = jan -> X(F(month.month = dec)))
+LTLSPEC G(year.yearType = leap -> year.isLeapYear)
+LTLSPEC G(year.isLeapYear -> year.yearType = leap | year.yearType = none)
