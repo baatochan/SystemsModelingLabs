@@ -1,0 +1,128 @@
+-- C++ code --
+-- int number, i = 1, factorial = 1, sigma = 0, primes;
+-- cin >> number;
+-- if (number > 2) {												// e00
+--     for (int j = 3; j <= number; j++) {							// e01
+--         factorial = 1;
+--         i = 1;													// e02
+--         for (int x = 0; x < j - 2; x++) {						// e03
+--             factorial = factorial * i;
+--             i++;													// e04
+--         }
+--         sigma = sigma + (factorial - j * (factorial / j));		// e05
+--     }
+--     primes = -1 + sigma;											// e06
+--     if (number == 3)												// e07
+--         cout << 2;												// e08
+--     else
+--         cout << primes;											// e09
+-- }
+-- else
+--     cout << "wrong number";										// e10
+
+-- Model --
+MODULE main
+
+FROZENVAR number : 0..8;
+
+VAR
+	e : {e00, e01, e02, e03, e04, e05, e06, e07, e08, e09, e10};
+	i : 1..6;
+	factorial : 1..720;
+	sigma : 0..5;
+	primes : -1..4; -- used range 2..4 and 0 (for number == 3)
+	out : {UNSET, wrongNumber, 2, 3, 4, 0, 1, -1}; -- used values - {UNSET, wrongNumber, 2, 3, 4}
+	j : 2..8; -- 2 added to range because it's incremented when entering the loop as well
+	x : -1..5; -- -1 added to range because it's incremented when entering the loop as well
+
+ASSIGN
+	init(e) := e00;
+	next(e) := case
+		e = e00 & number > 2 : e01;
+		e = e00 & number <= 2 : e10;
+		e = e01 & j <= number : e02;
+		e = e01 & j > number : e06;
+		e = e02 : e03;
+		e = e03 & x < j - 2 : e04;
+		e = e03 & x >= j - 2 : e05;
+		e = e04 : e03;
+		e = e05 : e01;
+		e = e06 : e07;
+		e = e07 & number = 3 : e08;
+		e = e07 & number != 3 : e09;
+		e = e08 : e08;
+		e = e09 : e09;
+		e = e10 : e10;
+		TRUE : e;
+	esac;
+
+	init(i) := 1;
+	next(i) := case
+		i + 1 > 6 : i;
+		next(e) = e02 : 1;
+		next(e) = e04 : i + 1;
+		TRUE : i;
+	esac;
+
+	init(factorial) := 1;
+	next(factorial) := case
+		factorial * i > 720 : factorial;
+		next(e) = e02 : 1;
+		next(e) = e04 : factorial * i;
+		TRUE : factorial;
+	esac;
+
+	init(sigma) := 0;
+	next(sigma) := case
+		sigma + (factorial - j * (factorial / j)) > 5 : sigma;
+		next(e) = e05 : sigma + (factorial - j * (factorial / j));
+		TRUE : sigma;
+	esac;
+
+	init(primes) := 2;
+	next(primes) := case
+		-1 + sigma > 4 : primes;
+		next(e) = e06 : -1 + sigma;
+		TRUE : primes;
+	esac;
+
+	init(out) := UNSET;
+	next(out) := case
+		next(e) = e08 : 2;
+		next(e) = e09 : primes;
+		next(e) = e10 : wrongNumber;
+		TRUE : out;
+	esac;
+
+	init(j) := 2;
+	next(j) := case
+		j + 1 > 8 : j;
+		next(e) = e01 : j + 1;
+		TRUE : j;
+	esac;
+
+	init(x) := 0;
+	next(x) := case
+		x + 1 > 5 : x;
+		next(e) = e02 : -1;
+		next(e) = e03 : x + 1;
+		TRUE : x;
+	esac;
+
+LTLSPEC !F(out in -1..1)
+
+-- ex. 2.1
+LTLSPEC G(number in 0..2 -> (out = UNSET | out = wrongNumber))
+
+-- ex. 2.2
+LTLSPEC G(number in 3..4 -> (out = UNSET | out = 2))
+LTLSPEC G(number in 5..6 -> (out = UNSET | out = 3))
+LTLSPEC G(number in 7..8 -> (out = UNSET | out = 4))
+
+LTLSPEC G(number > 3 -> (primes >= 2 & primes <= 4))
+
+-- ex 2.3
+LTLSPEC G(number = 5 -> e = e01 -> j in 3..6)
+LTLSPEC G(number = 5 -> j = 2 -> e = e00)
+LTLSPEC G(number = 5 -> j in 3..5 -> e in {e01, e02, e03, e04, e05})
+LTLSPEC G(number = 5 -> j = 6 -> e in {e01, e06, e07, e09})
