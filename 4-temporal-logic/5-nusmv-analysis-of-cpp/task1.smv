@@ -122,7 +122,10 @@ LTLSPEC G(number in 7..8 -> (out = UNSET | out = 4))
 LTLSPEC G(number > 3 -> (primes >= 2 & primes <= 4))
 
 -- ex 2.3
-LTLSPEC G(number = 5 -> e = e01 -> j in 3..6)
+LTLSPEC G(number = 5 -> j in 2..6)
 LTLSPEC G(number = 5 -> j = 2 -> e = e00)
+LTLSPEC G(number = 5 -> e = e01 -> j in 3..6)
 LTLSPEC G(number = 5 -> j in 3..5 -> e in {e01, e02, e03, e04, e05})
 LTLSPEC G(number = 5 -> j = 6 -> e in {e01, e06, e07, e09})
+
+-- LTLSPEC G(number = 5 -> F(e = e10))
