@@ -98,6 +98,9 @@ More info: http://kompilatory.iiar.pwr.edu.pl/wiki/index.php/UML/Some_metamodels
 10.* Usunąć wielokrotne instr. warunkowe wewnętrzne zastępując je pojedynczą tam, gdzie ona naprawdę ma być (najpierw 'if', a po jego zakończeniu 'switch') (zadanie poza konkursem, dla szczególnie zainteresowanych)
 ```
 
+### Lab 6 and following
+Each lab has their own pdf file with task description in their directory. The directory name can be used as a hint about a topic of particular lab.
+
 ## Additional info
 * http://gromit.ict.pwr.wroc.pl/kompilatory/
 * https://www.youtube.com/playlist?list=PL7dV9Q_y6kXCCxTqVeNAv3RNMDYQWCRlo
